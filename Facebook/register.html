@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Sign Up for Facebook</title>
+</head>
+<body>
+    <div class="register-logo">
+        <span class="fb-logo">facebook</span>
+    </div>
+    <div class="register-root">
+        <form class="register-form" autocomplete="off">
+            <h2>Create a new account</h2>
+            <p>It's quick and easy.</p>
+            <hr>
+            <div class="register-names">
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Surname" required>
+            </div>
+            <div class="register-row">
+                <label for="dob-day" class="register-label">
+                    Date of birth <span title="Click for more info" class="info-icon">?</span>
+                </label>
+                <div class="dob-selects">
+                    <select id="dob-day" required>
+                        <option value="">Day</option>
+                        <script>
+                            for(let i=1;i<=31;i++)document.write(`<option value="${i}">${i}</option>`);
+                        </script>
+                    </select>
+                    <select id="dob-month" required>
+                        <option value="">Month</option>
+                        <option value="1">Jan</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Apr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Aug</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+                    <select id="dob-year" required>
+                        <option value="">Year</option>
+                        <script>
+                            for(let i=new Date().getFullYear();i>=1905;i--)document.write(`<option value="${i}">${i}</option>`);
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="register-row">
+                <label class="register-label">
+                    Gender <span title="Click for more info" class="info-icon">?</span>
+                </label>
+                <div class="gender-selects">
+                    <label class="gender-radio"><input type="radio" name="gender" required> Female</label>
+                    <label class="gender-radio"><input type="radio" name="gender" required> Male</label>
+                    <label class="gender-radio"><input type="radio" name="gender" required> Custom</label>
+                </div>
+            </div>
+            <input type="text" placeholder="Mobile number or email address" required>
+            <input type="password" placeholder="New password" required>
+            <p class="register-info">
+                People who use our service may have uploaded your contact information to Facebook. <a href="#">Learn more.</a>
+            </p>
+            <p class="register-terms">
+                By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.
+            </p>
+            <button type="submit" class="signup-btn">Sign Up</button>
+            <a href="index.html" class="back-login">Already have an account?</a>
+        </form>
+    </div>
+</body>
+</html>
