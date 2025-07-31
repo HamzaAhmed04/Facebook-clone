@@ -193,8 +193,11 @@ hr {
     border: none;
     border-radius: 6px;
     padding: 10px 0;
+
+    text-align: center;
     margin-top: 10px;
     cursor: pointer;
+    text-decoration: none;
     transition: background 0.2s;
     width: 194px;
     align-self: center;
